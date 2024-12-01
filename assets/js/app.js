@@ -28,6 +28,16 @@ Hooks.Game = {
     window.addEventListener("keydown", (e) => {
       this.pushEvent("keydown", { key: e.key })
     })
+  },
+  updated() {
+    this.animateArrows()
+  },
+  animateArrows() {
+    const arrows = document.querySelectorAll(".arrow")
+    arrows.forEach((arrow, index) => {
+      arrow.style.left = `${index * 60}px`
+      arrow.style.transition = "left 1s linear"
+    })
   }
 }
 

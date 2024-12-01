@@ -3,3 +3,27 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+#arrows-container {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .arrow.up {
+    background-image: url('/images/up-arrow.svg');
+  }
+  
+  .arrow.down {
+    background-image: url('/images/down-arrow.svg');
+  }

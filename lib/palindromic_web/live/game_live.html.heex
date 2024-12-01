@@ -1,4 +1,7 @@
 <div id="game-container" phx-hook="Game">
-  <p>Game State: <%= inspect(@game_state) %></p>
-  <p>Position: (<%= @game_state.x %>, <%= @game_state.y %>)</p>
+  <div id="arrows-container">
+    <%= for arrow <- @arrows do %>
+      <div class={"arrow #{arrow.type}"} id={arrow.id}></div>
+    <% end %>
+  </div>
 </div>
